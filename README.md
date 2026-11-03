@@ -4,7 +4,7 @@ A responsive multi-page website that helps new students find campus bus routes, 
 
 Built for CSE 326 (CA) using only HTML, CSS and basic JavaScript.
 
-**Live site:** https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/
+**Live site:** https://isha28380-design.github.io/Campus_Bus-_Route/
 
 ## Problem
 
