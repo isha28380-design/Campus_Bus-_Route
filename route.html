@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Route details | Campus Bus Portal</title>
+<meta name="description" content="Campus bus routes, stops and timings for students.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="route">
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Campus Bus Portal</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="routes.html">Routes</a>
+      <a href="planner.html">Find a bus</a>
+      <a href="manage.html">Add or update</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<div id="msg" role="status" aria-live="polite"></div>
+<p><a href="routes.html">All routes</a></p>
+<div id="routeDetail"></div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <span>Timings are entered by students. Confirm with the transport office.</span>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

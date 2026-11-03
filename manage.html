@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add or update | Campus Bus Portal</title>
+<meta name="description" content="Campus bus routes, stops and timings for students.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="manage">
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Campus Bus Portal</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="routes.html">Routes</a>
+      <a href="planner.html">Find a bus</a>
+      <a href="manage.html" aria-current="page">Add or update</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<div id="msg" role="status" aria-live="polite"></div>
+<h1 id="formTitle">Add a route</h1>
+<form id="routeForm" novalidate>
+  <input type="hidden" id="routeId">
+  <div class="grid">
+    <label>Route name <input id="name" maxlength="40" placeholder="Hostel Loop"></label>
+    <label>Short code <input id="code" maxlength="4" placeholder="H1"></label>
+    <label>Category
+      <select id="category"><option>Hostel</option><option>Academic</option><option>Gate and city</option><option>Sports and gym</option></select>
+    </label>
+    <label>Status
+      <select id="status"><option>Running</option><option>Delayed</option><option>Suspended</option></select>
+    </label>
+  </div>
+  <label>Departure times from the first stop (24 hour, comma separated)
+    <input id="departures" placeholder="07:30, 08:15, 09:00">
+  </label>
+  <label>Stops, one per line, as: stop name, minutes after departure
+    <textarea id="stops" rows="6" placeholder="Hostel Block A, 0&#10;Library, 6&#10;Main Academic Block, 12"></textarea>
+  </label>
+  <label>Notes (optional)
+    <input id="notes" maxlength="120" placeholder="No service on Sundays">
+  </label>
+  <div class="row">
+    <button type="submit" class="btn" id="saveBtn">Save route</button>
+    <button type="button" class="btn ghost" id="cancelBtn">Clear form</button>
+  </div>
+</form>
+<h2>Manage existing routes</h2>
+<p class="hint">Change a route status here, edit its details, or remove it.</p>
+<div class="scroll"><table id="manageTable"></table></div>
+<p><button class="linkbtn" id="resetBtn">Reset to sample data</button></p>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <span>Timings are entered by students. Confirm with the transport office.</span>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

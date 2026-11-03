@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Campus Bus Portal</title>
+<meta name="description" content="Campus bus routes, stops and timings for students.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Campus Bus Portal</a>
+    <nav aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="routes.html">Routes</a>
+      <a href="planner.html">Find a bus</a>
+      <a href="manage.html">Add or update</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<div id="msg" role="status" aria-live="polite"></div>
+<section class="intro">
+  <h1>Campus bus routes and timings</h1>
+  <p>Look up which bus goes where, when the next one leaves, and whether it is running today.</p>
+  <form action="routes.html" method="get" class="row">
+    <label>Search a route or stop <input type="search" name="q" placeholder="Library, Main Gate, H1"></label>
+    <button class="btn" type="submit">Search routes</button>
+  </form>
+</section>
+<section>
+  <h2>Service summary</h2>
+  <div class="stats" id="stats"></div>
+</section>
+<section>
+  <h2>Next departures</h2>
+  <div class="scroll"><table id="nextTable"></table></div>
+  <p class="hint">Times are from each route&#39;s first stop. See <a href="planner.html">Find a bus</a> for times at other stops.</p>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <span>Timings are entered by students. Confirm with the transport office.</span>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

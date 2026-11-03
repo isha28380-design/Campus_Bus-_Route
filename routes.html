@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Routes | Campus Bus Portal</title>
+<meta name="description" content="Campus bus routes, stops and timings for students.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="routes">
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Campus Bus Portal</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="routes.html" aria-current="page">Routes</a>
+      <a href="planner.html">Find a bus</a>
+      <a href="manage.html">Add or update</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<div id="msg" role="status" aria-live="polite"></div>
+<h1>All routes</h1>
+<form class="row filters" onsubmit="return false">
+  <label>Search <input type="search" id="search" placeholder="Route name or stop"></label>
+  <label>Category
+    <select id="filterCat"><option value="">All</option><option>Hostel</option><option>Academic</option><option>Gate and city</option><option>Sports and gym</option></select>
+  </label>
+  <label>Status
+    <select id="filterStatus"><option value="">All</option><option>Running</option><option>Delayed</option><option>Suspended</option></select>
+  </label>
+</form>
+<p id="count" class="hint"></p>
+<div id="routeList"></div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <span>Timings are entered by students. Confirm with the transport office.</span>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
