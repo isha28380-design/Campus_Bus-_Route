@@ -119,7 +119,3 @@ A custom domain can be added under the same Pages settings by adding the DNS rec
 | [Name 3] | [Roll number] | [Section] |
 
 Course: CSE 326, Continuous Assessment
-
-## License
-
-Add a license of your choice (for example MIT) or remove this section if the repository is only for coursework.
